@@ -1,0 +1,10 @@
+{
+  "games": [
+    {
+      "title": "Crash Bandicoot",
+      "genre": "RPG",
+      "releaseYear": "2000",
+      "id": 1
+    }
+  ]
+}

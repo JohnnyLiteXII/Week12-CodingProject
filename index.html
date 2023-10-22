@@ -1,0 +1,119 @@
+<!-- Copyright (c) 2023 Promineo Tech 
+
+Author:  Juan Mejia
+
+Week 12 - Coding Project
+
+----------------------------------------------------
+
+Coding Steps:
+- Create a full CRUD application of your choice using an API or JSON Server.
+- Use JQuery/AJAX to interact with the API. 
+- Use a form to post new entities.
+- Build a way for users to update or delete entities.
+- Include a way to get entities from the API.
+- Use Bootstrap and CSS to style your project.
+
+Note: Make sure to start the JSON Server to serve as the API.
+Use "json-server --watch db.json" on the Bash termimal.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game List</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-sm navbar bg-body-secondary">
+        <a class="navbar-brand" href="index.html">Video Game List</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropdown" 
+        aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only"></span> </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center">Video Game List</h1>
+        <div class="container">
+            
+        <form class="container text-center" id="game-form">
+
+        <!-- A form for adding new games with the "game-form" ID.  -->
+            <input type="text" id="title" placeholder="Game Title" required>
+            <!-- Input field for the game title. The "required" attribute indicates it's a mandatory field. -->
+            <input type="text" id="genre" placeholder="Genre" required>
+            <!-- Input field for the game genre. -->
+            <input type="number" id="releaseYear" placeholder="Release Year" required>
+            <!-- Input field for the release year. -->
+            <div><br>
+            <button type="submit" class="btn btn-primary">Add Game</button>
+            <!-- Submit button with the label "Add Game" -->
+            </div>
+        </form>
+        </div>
+        <div><br>
+
+        <div class="container-fluid" id="game-list"></div>
+        <!-- A container for displaying the list of games. -->
+        </div>
+    </div>
+
+    <footer class="bg-dark-subtle text-bg-info py-4">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            <h5>About VGL</h5>
+            <p>
+                Video Game List is a video game list
+                collection. Create, Remove, Update, Delete items on the list.
+            </p>
+            </div>
+            <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Privacy Policy</a></li>
+                <li><a href="#" class="text-white">Terms of Service</a></li>
+                <li><a href="#" class="text-white">Contact</a></li>
+            </ul>
+            </div>
+            <!-- Social Media -->
+            <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <a href="#" class="text-white mr-3"
+                ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-white mr-3"
+                ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col text-center">
+            <p>&copy; 2023 Video Game List. All rights reserved.</p>
+            <!-- Copyright notice. -->
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!--Script that run with this page-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>
